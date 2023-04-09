@@ -1,0 +1,31 @@
+@host = http://localhost:5050
+
+###
+GET {{host}}
+
+###
+GET {{host}}/blog
+
+###
+GET {{host}}/blog/nik
+
+###
+POST {{host}}/blog
+Content-Type: application/json
+
+{
+    "author": "anja",
+    "text": "Sweet dreams",
+    "topic": "travel"
+}
+
+###
+PUT {{host}}/blog/6432b0b452b9fe0223f3fdea
+Content-Type: application/json
+
+{
+    "rating": 4
+}
+
+###
+DELETE {{host}}/blog/6432bcc5bec64c2ecf6e9fcf
